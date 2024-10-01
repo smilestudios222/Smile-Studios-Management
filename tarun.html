@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarun</title>
+    <title>TARUN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -16,18 +16,36 @@
         }
 
         /* Header Styling */
-        header {
+          /* Header Styling with Fade-in Animation */
+          header {
             background-color: #5f6163;
             color: #fff;
-            padding: 5px 0; /* Smaller padding for a smaller header */
-            position: relative;
+            padding: 10px 0; /* Reduced padding */
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
         }
 
         header h1 {
             font-size: 2rem; /* Reduced font size */
-            letter-spacing: 2px;
+            letter-spacing: 1.5px; /* Reduced letter spacing */
+        }
+
+          /* Button Styles for Header */
+          .header-button {
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            margin: 0 10px; /* Spacing between buttons */
+            background-color: #495057; /* Button background */
+            border: 1px solid transparent; /* Border for hover effect */
+        }
+
+        .header-button:hover {
+            background-color: #6c757d; /* Lighter background on hover */
+            transform: translateY(-3px); /* Lift effect */
+            border: 1px solid #fff; /* Add white border on hover */
         }
 
         /* "Website" Button */
@@ -86,10 +104,12 @@
                 transform: translateY(0);
             }
         }
+        
 
         /* Button container */
         .button-container {
             display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
             justify-content: center; /* Center align */
             gap: 20px; /* Space between buttons */
             margin-top: 30px; /* Space above button container */
@@ -146,16 +166,19 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="text-center">
-        <h1>Tarun - Editor / Photographer</h1>
-        <a href="https://yourwebsite.com" class="website-btn" target="_blank">Website</a>
+     <!-- Header -->
+     <header class="text-center">
+        <h1>TARUN - Editor</h1>
+        <div class="button-container">
+        <a href="#" target="_blank" class="header-button">WEBSITE</a>
+        </div>
     </header>
+
 
     <!-- Main content -->
     <div class="container text-center mt-5 main-content">
-        <h2>Hey TARUN, Welcome Back!</h2>
-        <p>Explore your work and manage your projects easily with the links below.</p> <!-- Added welcoming paragraph -->
+        <h2>Hey TARUN, Welcome Back</h2>
+        <p>Explore your work and manage your projects easily with the links below.</p>
         <div class="button-container">
             <div class="profile-button">
                 <a href="https://docs.google.com/spreadsheets/d/1PgiM9o4Ty0cLnrnt_vNC4g4lyVyJ2ENdJkir5jn5xRA/edit?gid=1925885146#gid=1925885146" target="_blank">
@@ -163,7 +186,7 @@
                     <div class="profile-name">WORK RECORD</div>
                 </a>
             </div>
-            <div class="profile-button">
+        <div class="profile-button">
                 <a href="https://docs.google.com/spreadsheets/d/1G4230AAeIu5tE2XI9RCMjcWP7t_fmq6DDj-vF934GQ4/edit?gid=705407738#gid=705407738" target="_blank">
                     <img src="reel.jpg" alt="reel" class="profile-pic">
                     <div class="profile-name">SOCIAL MEDIA</div>
@@ -183,6 +206,8 @@
             </div>
         </div>
     </div>
+
+  
 
     <!-- Footer -->
     <footer>

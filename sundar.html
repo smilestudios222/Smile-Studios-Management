@@ -16,18 +16,36 @@
         }
 
         /* Header Styling */
-        header {
-            background-color: #5f6163;;
+          /* Header Styling with Fade-in Animation */
+          header {
+            background-color: #5f6163;
             color: #fff;
-            padding: 5px 0; /* Smaller padding for a smaller header */
-            position: relative;
+            padding: 10px 0; /* Reduced padding */
             opacity: 0;
             animation: fadeIn 1.5s ease-in-out forwards;
         }
 
         header h1 {
             font-size: 2rem; /* Reduced font size */
-            letter-spacing: 2px;
+            letter-spacing: 1.5px; /* Reduced letter spacing */
+        }
+
+          /* Button Styles for Header */
+          .header-button {
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            margin: 0 10px; /* Spacing between buttons */
+            background-color: #495057; /* Button background */
+            border: 1px solid transparent; /* Border for hover effect */
+        }
+
+        .header-button:hover {
+            background-color: #6c757d; /* Lighter background on hover */
+            transform: translateY(-3px); /* Lift effect */
+            border: 1px solid #fff; /* Add white border on hover */
         }
 
         /* "Website" Button */
@@ -86,6 +104,7 @@
                 transform: translateY(0);
             }
         }
+        
 
         /* Button container */
         .button-container {
@@ -147,10 +166,12 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="text-center">
+     <!-- Header -->
+     <header class="text-center">
         <h1>SUNDAR - Founder / Senior Photographer, Editor</h1>
-        <a href="" class="website-btn" target="_blank">Website</a>
+        <div class="button-container">
+        <a href="#" target="_blank" class="header-button">WEBSITE</a>
+        </div>
     </header>
 
     <!-- Main content -->
