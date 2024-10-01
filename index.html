@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure footer stays at bottom */
+        }
+
+        /* Header Styling with Fade-in Animation */
+        header {
+            background-color: #5f6163;
+            color: #fff;
+            padding: 10px 0; /* Reduced padding */
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        header h1 {
+            font-size: 2rem; /* Reduced font size */
+            letter-spacing: 1.5px; /* Reduced letter spacing */
+        }
+
+          /* Button Styles for Header */
+          .header-button {
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            margin: 0 10px; /* Spacing between buttons */
+            background-color: #495057; /* Button background */
+            border: 1px solid transparent; /* Border for hover effect */
+        }
+
+        .header-button:hover {
+            background-color: #6c757d; /* Lighter background on hover */
+            transform: translateY(-3px); /* Lift effect */
+            border: 1px solid #fff; /* Add white border on hover */
+        }
+
+        /* Fade In Animation for Header */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Profile Button Styles */
+        .profile-button {
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            opacity: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        /* Button Hover Effects */
+        .profile-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
+
+        /* Profile Picture Styling */
+        .profile-pic {
+            border-radius: 10%; /* Slightly rounded corners */
+            width: 200px; /* Fixed width */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Ensure pictures are centered */
+            transition: transform 0.3s ease;
+        }
+
+        .profile-name {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007bff; /* Updated text color */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s ease;
+        }
+
+        /* Slide In Animation for Buttons */
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Profile Name Hover */
+        .profile-name:hover {
+            color: #0056b3; /* Darker shade on hover */
+        }
+
+         /* Remove underline from link text */
+         a {
+            text-decoration: none; /* No underline for all links */
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: auto; /* Push footer to the bottom */
+            padding-bottom: 10px;
+            background-color: #f1f1f1;
+            font-size: 0.9rem;
+            opacity: 0;
+            animation: fadeInUp 2s ease-in-out 1s forwards; /* Animation for footer */
+        }
+
+        /* Bounce Animation for Footer */
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Button container */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            justify-content: center; /* Center align */
+            gap: 20px; /* Space between buttons */
+            margin-top: 30px; /* Space above button container */
+        }
+        /* Paragraph Styling */
+        .container p {
+             font-size: 1.1rem; /* Adjust font size */
+             color: #666; /* Gray color for the paragraph */
+             margin-bottom: 20px; /* Space below the paragraph */
+        }
+
+        /* Mobile-friendly Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem; /* Adjusted for mobile */
+            }
+
+            .profile-pic {
+                width: 120px; /* Smaller for mobile */
+                height: 120px; /* Maintain shape */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profile-button {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="text-center">
+        <h1>SMILE STUDIOS</h1>
+        <div class="button-container">
+        <a href="#" target="_blank" class="header-button">WEBSITE</a>
+        </div>
+    </header>
+
+    <div class="container text-center mt-4">
+        <p>Welcome to Smile Studios! Here's the team </p>
+    </div>
+
+    <!-- Main content with buttons -->
+    <div class="container text-center mt-4 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 profile-button scroll-animate">
+                <a href="tarun.html" target="_blank">
+                    <img src="tarun.jpg" alt="Profile 1" class="profile-pic">
+                    <div class="profile-name">TARUN</div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 profile-button scroll-animate">
+                <a href="sundar.html" target="_blank">
+                    <img src="sundar.jpg" alt="Profile 2" class="profile-pic">
+                    <div class="profile-name">SUNDAR</div>
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 profile-button scroll-animate">
+                <a href="akshaya.html" target="_blank">
+                    <img src="akshaya.jpg" alt="Profile 3" class="profile-pic">
+                    <div class="profile-name">AKSHAYA</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('active');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        });
+    </script>
+
+</body>
+</html>
